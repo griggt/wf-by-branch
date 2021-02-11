@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     runs-on: [ubuntu-latest]
-    name: Test
+    name: Build
     steps:
-      - name: Show it
-        run: echo "Here's 2.13!"
+      - name: Build it
+        run: echo "Here's 2.12!"
