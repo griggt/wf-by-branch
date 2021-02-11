@@ -1,0 +1,13 @@
+name: CI Test
+
+on:
+  push:
+    branches: ['2.*.x']
+
+jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    name: Test
+    steps:
+      - name: Show it
+        run: echo "Here's 2.13!"
