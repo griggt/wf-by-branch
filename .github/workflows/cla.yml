@@ -1,6 +1,20 @@
 name: Scala CLA
 on: [pull_request]
 jobs:
+  show_context_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show results
+        run: |
+          echo "${{ toJSON(github) }}"
+
+      - name: Show extracts
+        run: |
+          echo "github.actor: ${{ github.actor }}"
+          echo "github.event.sender.login: ${{ github.event.sender.login }}"
+          echo "github.event.pull_request.user.login: ${{ github.event.pull_request.user.login }}"
+          echo "github.event.pull_request.head.user.login: ${{ github.event.pull_request.head.user.login }}"
+
   check:
     runs-on: ubuntu-latest
     steps:
