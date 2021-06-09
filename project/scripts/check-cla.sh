@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -eux
 
-AUTHOR=$GITHUB_ACTOR
 echo "Pull request submitted by $AUTHOR";
 signed=true
 if [ "$signed" = "true" ] ; then
